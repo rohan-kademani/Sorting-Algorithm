@@ -1,12 +1,6 @@
-public class SelectionSorting {
+public class SelectionSort {
 
-    public static void main(String[] args) {
-        int nums[] = { 1, 7, 5, 2, 3, 9 };
-        System.out.println("Selection Sort in Action");
-        for(int i:nums)
-            System.out.print(i+" ");
-        System.out.println();
-
+    public static int[] selectionSortMethod(int nums[]){
         for (int i = 0; i < nums.length; i++) {
             int minIndex = i;
             for (int j = i; j < nums.length; j++) {
@@ -21,9 +15,22 @@ public class SelectionSorting {
             }
         }       
         
-        
-        for(int i:nums)
+        return nums;
+    } 
+
+    public static void printArray(int nums[]){
+        System.out.print("Printing Array :");
+        for(int i : nums){
             System.out.print(i+" ");
+        }
         System.out.println();
+    }
+    
+    public static void main(String[] args) {
+        int nums[] = { 1, 7, 5, 2, 3, 9 };
+        printArray(nums);
+        selectionSortMethod(nums);
+        printArray(nums);
+        
     }
 }
